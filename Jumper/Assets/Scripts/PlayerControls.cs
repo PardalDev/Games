@@ -28,6 +28,19 @@ public class PlayerControls : MonoBehaviour
         onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
         rb.velocity = new Vector2(joystick.Horizontal * 5f, rb.velocity.y);
+        if (rb.velocity.x > 0) {
+            GetComponent<Animator>().SetBool("Corriendo", true);
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        if (rb.velocity.x == 0)
+        {
+            GetComponent<Animator>().SetBool("Corriendo", false);
+        }
+        if (rb.velocity.x < 0)
+        {
+            GetComponent<Animator>().SetBool("Corriendo", true);
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
         /*
         // Para moverse con A y D
         if (Input.GetKey(KeyCode.D)) {
@@ -58,8 +71,12 @@ public class PlayerControls : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 5);
         }
         //ademas si clickeo disparo
-        bool shoot = Input.GetButtonDown("Fire1");
-        shoot |= Input.GetButtonDown("Fire2");
+        bool shoot = false;
+        if (joybutton.Pressed) {
+            shoot = true;
+        }
+        //bool shoot = Input.GetButtonDown("Fire1"); //antes disparaba con el click
+        //shoot |= Input.GetButtonDown("Fire2");
         if (shoot) {
             WeaponScript weapon = GetComponent<WeaponScript>();
             if (weapon != null) {
