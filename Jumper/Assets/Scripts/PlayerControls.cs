@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     public Rigidbody2D rb;
+    protected Joystick joystick;
+    protected joybutton joybutton;
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
@@ -14,15 +16,20 @@ public class PlayerControls : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        joystick = FindObjectOfType<Joystick>();
+        joybutton = FindObjectOfType<joybutton>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //Inicio sin velocidad en ninguno de los dos ejes
-        rb.velocity = new Vector2(0, rb.velocity.y);
+        //rb.velocity = new Vector2(0, rb.velocity.y);
         onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
+        rb.velocity = new Vector2(joystick.Horizontal * 5f, rb.velocity.y);
+        /*
+        // Para moverse con A y D
         if (Input.GetKey(KeyCode.D)) {
             if (GetComponent<SpriteRenderer>().flipX == true)
             {
@@ -43,10 +50,10 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)){
             GetComponent<Animator>().SetBool("Corriendo", false);
         }
+        */
 
-
-            //Si clickeo y estoy en tierra salto!
-            if (Input.GetMouseButtonDown(0) & onGround)
+        //Si clickeo y estoy en tierra salto!
+        if (joybutton.Pressed & onGround)
         {
             rb.velocity = new Vector2(rb.velocity.x, 5);
         }
