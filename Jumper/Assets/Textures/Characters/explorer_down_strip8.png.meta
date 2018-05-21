@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: c45538e63f784e34e8d4fec4a5b7fb1b
+guid: eeb38b199e018164bb09003fa52c4061
 TextureImporter:
   fileIDToRecycleName:
-    21300000: explorer_right_strip8_0
-    21300002: explorer_right_strip8_1
-    21300004: explorer_right_strip8_2
-    21300006: explorer_right_strip8_3
-    21300008: explorer_right_strip8_4
-    21300010: explorer_right_strip8_5
-    21300012: explorer_right_strip8_6
-    21300014: explorer_right_strip8_7
+    21300000: explorer_down_strip8_0
+    21300002: explorer_down_strip8_1
+    21300004: explorer_down_strip8_2
+    21300006: explorer_down_strip8_3
+    21300008: explorer_down_strip8_4
+    21300010: explorer_down_strip8_5
+    21300012: explorer_down_strip8_6
+    21300014: explorer_down_strip8_7
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -145,7 +145,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: explorer_right_strip8_0
+      name: explorer_down_strip8_0
       rect:
         serializedVersion: 2
         x: 2
@@ -159,13 +159,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1add0dc30622c7f47ab268936f6198d5
+      spriteID: e277f0f0e3c3648408b727572cbfdd48
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: explorer_right_strip8_1
+      name: explorer_down_strip8_1
       rect:
         serializedVersion: 2
         x: 34
@@ -179,13 +179,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ebca8ad430feb64e893c5b1faa59de2
+      spriteID: 61207cb6266004b45a6e858a22ac4976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: explorer_right_strip8_2
+      name: explorer_down_strip8_2
       rect:
         serializedVersion: 2
         x: 66
@@ -199,13 +199,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46813469481de24458ad56215053b214
+      spriteID: ec2cc927f60e56d42bccb8122e31a4e8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: explorer_right_strip8_3
+      name: explorer_down_strip8_3
       rect:
         serializedVersion: 2
         x: 98
@@ -219,13 +219,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a10e51c120edcb7408b8accac0379039
+      spriteID: 0d81562bb9cba334598c797ce6947bf6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: explorer_right_strip8_4
+      name: explorer_down_strip8_4
       rect:
         serializedVersion: 2
         x: 130
@@ -239,13 +239,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecb2720af4802d742be93db57394ab33
+      spriteID: 87a3f4b695bb38f4b9453d8dd1e2c163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: explorer_right_strip8_5
+      name: explorer_down_strip8_5
       rect:
         serializedVersion: 2
         x: 162
@@ -259,13 +259,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67ec4263fb643ae44a9e2e570e13d3f8
+      spriteID: ec9a94caf9e05434b8f8d06f9e6b3a34
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: explorer_right_strip8_6
+      name: explorer_down_strip8_6
       rect:
         serializedVersion: 2
         x: 194
@@ -279,13 +279,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 018b70c454c2fd942a0e1580a9d0814b
+      spriteID: 1b9fe7b7c514eaa46ad1bd1805096627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: explorer_right_strip8_7
+      name: explorer_down_strip8_7
       rect:
         serializedVersion: 2
         x: 226
@@ -299,7 +299,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2833b2e358721de438189906da722b1e
+      spriteID: 52ae21b80de14144580be08e1795a021
       vertices: []
       indices: 
       edges: []
@@ -307,7 +307,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3ab66f4bd847d7a488b13e89fe9faaac
+    spriteID: 37acccb5e349af84abc4223c7da43026
     vertices: []
     indices: 
     edges: []
