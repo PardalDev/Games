@@ -27,7 +27,7 @@ public class PlayerControls : MonoBehaviour
         //rb.velocity = new Vector2(0, rb.velocity.y);
         onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
-        rb.velocity = new Vector2(joystick.Horizontal * 5f, rb.velocity.y);
+        rb.velocity = new Vector2(joystick.Horizontal * 5f + Input.GetAxis("Horizontal") * 5f, rb.velocity.y);
         if (rb.velocity.x > 0) {
             GetComponent<Animator>().SetBool("Corriendo", true);
             GetComponent<SpriteRenderer>().flipX = false;
@@ -66,14 +66,20 @@ public class PlayerControls : MonoBehaviour
         */
 
         //Si clickeo y estoy en tierra salto!
-        if (joybutton.Pressed & onGround)
+        if ((joybutton.Pressed & onGround) || (Input.GetButton("Fire1")  & onGround))
         {
             rb.velocity = new Vector2(rb.velocity.x, 5);
         }
         //ademas si clickeo disparo
         bool shoot = false;
-        if (joybutton.Pressed) {
+        if (joybutton.Pressed)
+        {
             shoot = true;
+        }
+        else {
+            if (Input.GetButton("Fire2")) {
+                shoot = true;
+            }
         }
         //bool shoot = Input.GetButtonDown("Fire1"); //antes disparaba con el click
         //shoot |= Input.GetButtonDown("Fire2");
