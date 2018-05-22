@@ -49,11 +49,18 @@ public class WeaponScript : MonoBehaviour
     {
         if (CanAttack)
         {
+            //elegir que sonido tendra el disparo TODO - Mejorar el metodo de seleccion.
+            if (isEnemy)
+            {
+                SoundEffectsHelper.Instance.MakeEnemyShotSound();
+            }
+            else {
+                SoundEffectsHelper.Instance.MakePlayerShotSound();
+            }
             shootCooldown = shootingRate;
 
             // Create a new shot
             var shotTransform = Instantiate(shotPrefab) as Transform;
-
             // Assign position
             shotTransform.position = transform.position;
 

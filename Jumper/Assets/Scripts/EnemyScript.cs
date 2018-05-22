@@ -68,8 +68,10 @@ public class EnemyScript : MonoBehaviour {
             {
                 if (weapon != null && weapon.CanAttack)
                 {
+                    //El enemigo es quien ataca...por eso envio true
                     weapon.Attack(true);
-                    SoundEffectsHelper.Instance.MakeEnemyShotSound();
+                    //Se migra el efecto para el arma en vez de que lo reproduzca el usuario, de esta forma no sonara cada vez que se apreta el boton, sino cuando el CD lo permite
+                    //SoundEffectsHelper.Instance.MakeEnemyShotSound();
                 }
             }
 

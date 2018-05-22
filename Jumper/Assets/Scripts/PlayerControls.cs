@@ -66,28 +66,24 @@ public class PlayerControls : MonoBehaviour
         */
 
         //Si clickeo y estoy en tierra salto!
-        if ((joybutton.Pressed & onGround) || (Input.GetButton("Fire1")  & onGround))
+        if ((joybutton.Pressed & onGround) || (Input.GetButtonDown("Fire1")  & onGround))
         {
             rb.velocity = new Vector2(rb.velocity.x, 5);
         }
         //ademas si clickeo disparo
         bool shoot = false;
-        if (joybutton.Pressed)
+        if ((joybutton.Pressed) || (Input.GetButtonDown("Fire2")))
         {
             shoot = true;
         }
-        else {
-            if (Input.GetButton("Fire2")) {
-                shoot = true;
-            }
-        }
-        //bool shoot = Input.GetButtonDown("Fire1"); //antes disparaba con el click
-        //shoot |= Input.GetButtonDown("Fire2");
+
         if (shoot) {
             WeaponScript weapon = GetComponent<WeaponScript>();
             if (weapon != null) {
+                //El player es quien ataca por eso envio false (se espera isEnemy en el weapon script)
                 weapon.Attack(false);
-                SoundEffectsHelper.Instance.MakePlayerShotSound();
+                //Se migra el efecto para el arma en vez de que lo reproduzca el usuario, de esta forma no sonara cada vez que se apreta el boton, sino cuando el CD lo permite
+                //SoundEffectsHelper.Instance.MakePlayerShotSound();
             }
         }
 
