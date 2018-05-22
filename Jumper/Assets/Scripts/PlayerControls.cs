@@ -66,13 +66,13 @@ public class PlayerControls : MonoBehaviour
         */
 
         //Si clickeo y estoy en tierra salto!
-        if ((joybutton.Pressed & onGround) || (Input.GetButtonDown("Fire1")  & onGround))
+        if ((joybutton.Pressed & onGround) || (Input.GetKey(KeyCode.K) & onGround))
         {
             rb.velocity = new Vector2(rb.velocity.x, 5);
         }
         //ademas si clickeo disparo
         bool shoot = false;
-        if ((joybutton.Pressed) || (Input.GetButtonDown("Fire2")))
+        if ((joybutton.Pressed) || (Input.GetKey(KeyCode.L)))
         {
             shoot = true;
         }

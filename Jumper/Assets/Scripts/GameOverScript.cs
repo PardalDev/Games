@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class GameOverScript : MonoBehaviour
 {
+
     private Button[] buttons;
+    private GameObject panel;
 
     void Awake()
     {
         // Get the buttons
-        buttons = GetComponentsInChildren<Button>();
+        buttons = FindObjectsOfType<Button>();
 
         // Disable them
         HideButtons();
@@ -24,7 +26,6 @@ public class GameOverScript : MonoBehaviour
             b.gameObject.SetActive(false);
         }
     }
-
     public void ShowButtons()
     {
         foreach (var b in buttons)
