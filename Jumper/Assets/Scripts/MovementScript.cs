@@ -5,12 +5,12 @@
 /// </summary>
 public class MovementScript : MonoBehaviour
 {
-    // 1 - Designer variables
+    private SpriteRenderer objectRender;
 
     /// <summary>
     /// Object speed
     /// </summary>
-    public Vector2 speed = new Vector2(10, 10);
+    public Vector2 speed = new Vector2(1000, 10);
 
     /// <summary>
     /// Moving direction
@@ -26,6 +26,12 @@ public class MovementScript : MonoBehaviour
         movement = new Vector2(
           speed.x * direction.x,
           speed.y * direction.y);
+
+        objectRender = GetComponent<SpriteRenderer>();
+        if (!objectRender.IsVisibleFrom(Camera.main))
+        {
+            Destroy(gameObject, 0);
+        }
     }
 
     void FixedUpdate()
