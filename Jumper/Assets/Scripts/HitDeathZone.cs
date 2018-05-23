@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class HitDeathZone : MonoBehaviour {
 
-     void OnTriggerEnter2D(Collider2D collision)
+     void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        GameObject hitObj = GetComponent<Collider2D>().gameObject;
+        GameObject player = GameObject.Find("Player");
+        Destroy(player);
 
-            //Destroy(hitObj);
-           // transform.parent.gameObject.AddComponent<GameOverScript>();
-        
-    }
+      }
 }

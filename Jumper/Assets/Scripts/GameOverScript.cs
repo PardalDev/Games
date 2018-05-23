@@ -8,7 +8,6 @@ public class GameOverScript : MonoBehaviour
 {
 
     private Button[] buttons;
-    private GameObject panel;
 
     void Awake()
     {
