@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4021915164399192}
-  - component: {fileID: 114866328055583296}
+  - component: {fileID: 114142238803310796}
   m_Layer: 0
   m_Name: EnemyWeapon
   m_TagString: Untagged
@@ -55,8 +55,8 @@ GameObject:
   - component: {fileID: 61206164117432546}
   - component: {fileID: 122013364018824638}
   - component: {fileID: 114536777763645168}
+  - component: {fileID: 114264899121309332}
   - component: {fileID: 114428679162585224}
-  - component: {fileID: 114891578492843870}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481345845064782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.3626, y: -1.6583996, z: 0}
+  m_LocalPosition: {x: -2.21, y: 1.24, z: 0}
   m_LocalScale: {x: 3.0541599, y: 3.58881, z: 1}
   m_Children:
   - {fileID: 4495927087416450}
@@ -150,6 +150,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.188168, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &114142238803310796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1078725216129726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f3f49777bf6b0408ecdb8dbe5844da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPrefab: {fileID: 4317721892968712, guid: 0d9a20306b06eff4fa60727e6b3bf8ae, type: 2}
+  shootingRate: 1
+--- !u!114 &114264899121309332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1481345845064782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289d51229f8c72c4d95ed139ce909f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+  isEnemy: 1
+  applyScore: 1
+  scoreValue: 1
 --- !u!114 &114428679162585224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -158,11 +186,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1481345845064782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecea0ac250611464f91f35004c2e8a37, type: 3}
+  m_Script: {fileID: 11500000, guid: dc2f32691b2a2334283f719457d78626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 2, y: 2}
-  direction: {x: 0, y: -1}
+  direction: {x: -1, y: -1}
 --- !u!114 &114536777763645168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -171,7 +199,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1481345845064782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c7154fca7aa2ea4ab5d4e58a7b2691a, type: 3}
+  m_Script: {fileID: 11500000, guid: a62de029f3f9fc7408aaa75cdfa96ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 50271855292792192}
@@ -182,34 +210,6 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &114866328055583296
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1078725216129726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abdc036bb1aa0dd478a32ab67d9044f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 4317721892968712, guid: af54c6bf4c6a2d64f86850b031bced58, type: 2}
-  shootingRate: 1
---- !u!114 &114891578492843870
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1481345845064782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b23b5e933ea8814f96777aaecac955d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 1
-  isEnemy: 1
-  applyScore: 1
-  scoreValue: 1
 --- !u!122 &122013364018824638
 Halo:
   m_ObjectHideFlags: 1
@@ -256,7 +256,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a60973179ac114b46a512ee5a9e3a5f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9f15940837b52764896f16ccbf22cb91, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
