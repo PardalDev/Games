@@ -30,15 +30,18 @@ public class PlayerScript : MonoBehaviour
         rb.velocity = new Vector2(joystick.Horizontal * 5f + Input.GetAxis("Horizontal") * 5f, rb.velocity.y);
         if (rb.velocity.x > 0) {
             GetComponent<Animator>().SetBool("Corriendo", true);
+            GetComponent<Animator>().SetBool("Jumping", false);
             GetComponent<SpriteRenderer>().flipX = false;
         }
         if (rb.velocity.x == 0)
         {
             GetComponent<Animator>().SetBool("Corriendo", false);
+            GetComponent<Animator>().SetBool("Jumping", false);
         }
         if (rb.velocity.x < 0)
         {
             GetComponent<Animator>().SetBool("Corriendo", true);
+            GetComponent<Animator>().SetBool("Jumping", false);
             GetComponent<SpriteRenderer>().flipX = true;
         }
         /*
@@ -69,6 +72,7 @@ public class PlayerScript : MonoBehaviour
         if ((joybutton.Pressed & onGround) || (Input.GetKey(KeyCode.K) & onGround))
         {
             rb.velocity = new Vector2(rb.velocity.x, 5);
+            GetComponent<Animator>().SetBool("Jumping", true);
         }
         //ademas si clickeo disparo
         bool shoot = false;
