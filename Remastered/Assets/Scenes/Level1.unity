@@ -799,7 +799,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1796122862690776, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
       propertyPath: m_Name
-      value: Particle System (1)
+      value: Particle System2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
@@ -1275,6 +1275,64 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2446acb7650ce14f94afc9699556454, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1902849491
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 310543694}
+    m_Modifications:
+    - target: {fileID: 4495466139291150, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -29.050001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495466139291150, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 8.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495466139291150, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495466139291150, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.5453682
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495466139291150, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.4500817
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495466139291150, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.45008168
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495466139291150, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.5453682
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495466139291150, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1796122862690776, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
+      propertyPath: m_Name
+      value: Particle System3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495466139291150, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 4.3980203
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495466139291150, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 4.3980203
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495466139291150, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 4.39802
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f6a7f6d838e521243ab587518eb34585, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1910490024
 Prefab:
