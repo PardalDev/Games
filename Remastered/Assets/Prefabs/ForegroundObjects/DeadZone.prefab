@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4019154922976398}
   - component: {fileID: 61372191448869816}
-  - component: {fileID: 114113619666430808}
+  - component: {fileID: 114938909978230292}
   m_Layer: 0
   m_Name: DeadZone
   m_TagString: Untagged
@@ -66,7 +66,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 648.93933, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114113619666430808
+--- !u!114 &114938909978230292
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -74,6 +74,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076766186303116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 523e7fe2a9b0bd84da4cc92541c5f023, type: 3}
+  m_Script: {fileID: 11500000, guid: 85db32c5bffca1043801097b66622c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

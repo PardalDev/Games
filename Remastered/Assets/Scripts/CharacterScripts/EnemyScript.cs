@@ -17,6 +17,9 @@ public class EnemyScript : MonoBehaviour {
     private Collider2D coliderComponent;
     private SpriteRenderer rendererComponent;
 
+    //Test disabling camera scrolling
+    public GameObject Disablecamera;
+
     private void Awake()
     {
         moveScript = GetComponent<MovementScript>();
@@ -84,6 +87,9 @@ public class EnemyScript : MonoBehaviour {
     private void Spawn()
     {
         hasSpawn = true;
+        if (this.tag.Equals("Boss")) {
+            StartCoroutine(TimerRoutine());
+        }
 
         // -- Moving
         //moveScript.enabled = true;
@@ -92,5 +98,10 @@ public class EnemyScript : MonoBehaviour {
         {
             weapon.enabled = true;
         }
+    }
+    private IEnumerator TimerRoutine() {
+        yield return new WaitForSeconds(2);
+        Disablecamera = GameObject.FindGameObjectWithTag("MainCamera");
+        Disablecamera.GetComponent<ScrollingScript>().enabled = false;
     }
 }
