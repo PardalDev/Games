@@ -11,4 +11,9 @@ public class MainMenuScript : MonoBehaviour
         // "Stage1" is the name of the first scene we created.
         SceneManager.LoadScene("Level1");
     }
+    public void quitGame()
+    {
+        // "Stage1" is the name of the first scene we created.
+        Application.Quit();
+    }
 }

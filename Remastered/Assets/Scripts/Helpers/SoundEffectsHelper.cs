@@ -48,6 +48,8 @@ public class SoundEffectsHelper : MonoBehaviour
     private void MakeSound(AudioClip originalClip)
     {
         // As it is not 3D audio clip, position doesn't matter.
-        AudioSource.PlayClipAtPoint(originalClip, transform.position);
+        GameObject player = GameObject.Find("Player");
+        Vector3 pos = new Vector3(player.GetComponent<Transform>().position.x, player.GetComponent<Transform>().position.y, player.GetComponent<Transform>().position.z);
+        AudioSource.PlayClipAtPoint(originalClip, pos);
     }
 }
