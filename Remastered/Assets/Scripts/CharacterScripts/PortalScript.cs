@@ -17,7 +17,7 @@ public class PortalScript : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Level2");
     }
     /*private void OnTriggerEnter2D(Collider2D collision)
     {
