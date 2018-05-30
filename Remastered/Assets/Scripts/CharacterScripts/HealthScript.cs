@@ -26,6 +26,11 @@ public class HealthScript : MonoBehaviour
 
         if (hp <= 0)
         {
+
+            if (isEnemy == false)
+            {
+                Score.scorevalue = 0;
+            }
             // Dead!
             SoundEffectsHelper.Instance.MakeExplosionSound();
             SpecialEffectsHelper.Instance.Explosion(transform.position);

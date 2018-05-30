@@ -6227,6 +6227,29 @@ Prefab:
       propertyPath: speed.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4472865025449298, guid: 312648c5e5e1fae45876868bb7e30d9c, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040220095354974, guid: 312648c5e5e1fae45876868bb7e30d9c, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212154034464926330, guid: 312648c5e5e1fae45876868bb7e30d9c,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212154034464926330, guid: 312648c5e5e1fae45876868bb7e30d9c,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.9747927
+      objectReference: {fileID: 0}
+    - target: {fileID: 212154034464926330, guid: 312648c5e5e1fae45876868bb7e30d9c,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.7122642
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 122169905849584372, guid: 312648c5e5e1fae45876868bb7e30d9c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 312648c5e5e1fae45876868bb7e30d9c, type: 2}
