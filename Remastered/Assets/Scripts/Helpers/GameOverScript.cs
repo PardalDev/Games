@@ -37,11 +37,13 @@ public class GameOverScript : MonoBehaviour
     {
         // Reload the level
         SceneManager.LoadScene("Menu");
+        Score.scorevalue = 0;
     }
 
     public void RestartGame()
     {
         // Reload the level
         SceneManager.LoadScene("Level1");
+        Score.scorevalue = 0;
     }
 }
