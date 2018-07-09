@@ -31,17 +31,20 @@ public class PlayerScript : MonoBehaviour
         if (rb.velocity.x > 0) {
             GetComponent<Animator>().SetBool("Corriendo", true);
             GetComponent<Animator>().SetBool("Jumping", false);
+            GetComponent<Animator>().SetBool("Shoot", false);
             GetComponent<SpriteRenderer>().flipX = false;
         }
         if (rb.velocity.x == 0)
         {
             GetComponent<Animator>().SetBool("Corriendo", false);
             GetComponent<Animator>().SetBool("Jumping", false);
+            GetComponent<Animator>().SetBool("Shoot", false);
         }
         if (rb.velocity.x < 0)
         {
             GetComponent<Animator>().SetBool("Corriendo", true);
             GetComponent<Animator>().SetBool("Jumping", false);
+            GetComponent<Animator>().SetBool("Shoot", false);
             GetComponent<SpriteRenderer>().flipX = true;
         }
         /*
@@ -78,11 +81,12 @@ public class PlayerScript : MonoBehaviour
         bool shoot = false;
         if ((joybutton.Pressed) || (Input.GetKey(KeyCode.L)))
         {
+            GetComponent<Animator>().SetBool("Shoot", true);
             shoot = true;
         }
 
         if (shoot) {
-            WeaponScript weapon = GetComponent<WeaponScript>();
+            WeaponScript weapon = GetComponentInChildren<WeaponScript>();
             if (weapon != null) {
                 //El player es quien ataca por eso envio false (se espera isEnemy en el weapon script)
                 weapon.Attack(false);

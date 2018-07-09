@@ -23479,9 +23479,9 @@ BuoyancyEffector2D:
   m_Density: 50
   m_LinearDrag: 35
   m_AngularDrag: 20
-  m_FlowAngle: 0
-  m_FlowMagnitude: 0
-  m_FlowVariation: 0
+  m_FlowAngle: 10
+  m_FlowMagnitude: 10
+  m_FlowVariation: 10
 --- !u!331 &331898391031186850
 SpriteMask:
   m_ObjectHideFlags: 1

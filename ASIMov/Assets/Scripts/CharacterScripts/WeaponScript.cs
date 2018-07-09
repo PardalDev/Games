@@ -75,8 +75,9 @@ public class WeaponScript : MonoBehaviour
             MovementScript move = shotTransform.gameObject.GetComponent<MovementScript>();
             if (move != null)
             {
-                move.direction = this.transform.right; // towards in 2D space is the right of the sprite
+                    move.direction = this.transform.right; // towards in 2D space is the right of the sprite
             }
+            GetComponentInParent<Animator>().SetBool("Shoot", false);
         }
     }
 

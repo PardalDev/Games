@@ -3,7 +3,10 @@ guid: 77b8666fe81a1d346bf7a729391a8f84
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - explosionSound: {fileID: 8300000, guid: 95ebb0091d7a5a04c97090652d39a1f0, type: 3}
+  - playerShotSound: {fileID: 8300000, guid: c4c4ed82f1fc5a843b1b29a7b7f2b452, type: 3}
+  - enemyShotSound: {fileID: 8300000, guid: b16b1f2821186db4792fc37081960b65, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
