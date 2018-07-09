@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - weapon
+  - ButtonA
+  - ButtonB
   layers:
   - Default
   - TransparentFX

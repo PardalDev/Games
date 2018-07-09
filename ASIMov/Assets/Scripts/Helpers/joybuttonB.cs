@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class joybutton : MonoBehaviour, IPointerUpHandler, IPointerDownHandler {
+public class joybuttonB : MonoBehaviour, IPointerUpHandler, IPointerDownHandler {
     [HideInInspector]
     public bool Pressed;
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
 
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
 
     }
-    public void OnPointerDown(PointerEventData eventData){
+    public void OnPointerDown(PointerEventData eventData)
+    {
         Pressed = true;
     }
     public void OnPointerUp(PointerEventData eventData)

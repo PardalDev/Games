@@ -6,7 +6,8 @@ public class PlayerScript : MonoBehaviour
 {
     public Rigidbody2D rb;
     protected Joystick joystick;
-    protected joybutton joybutton;
+    protected joybuttonA joybuttonA;
+    protected joybuttonB joybuttonB;
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
@@ -17,7 +18,8 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         joystick = FindObjectOfType<Joystick>();
-        joybutton = FindObjectOfType<joybutton>();
+        joybuttonA = FindObjectOfType<joybuttonA>();
+        joybuttonB = FindObjectOfType<joybuttonB>();
     }
 
     // Update is called once per frame
@@ -47,39 +49,17 @@ public class PlayerScript : MonoBehaviour
             GetComponent<Animator>().SetBool("Shoot", false);
             GetComponent<SpriteRenderer>().flipX = true;
         }
-        /*
-        // Para moverse con A y D
-        if (Input.GetKey(KeyCode.D)) {
-            if (GetComponent<SpriteRenderer>().flipX == true)
-            {
-                GetComponent<SpriteRenderer>().flipX = false;
-            }
-            GetComponent<Animator>().SetBool("Corriendo", true);
-            transform.Translate(0.09f, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            if (GetComponent<SpriteRenderer>().flipX == false)
-            {
-                GetComponent<SpriteRenderer>().flipX = true;
-            }
-            GetComponent<Animator>().SetBool("Corriendo", true);
-            transform.Translate(-0.09f, 0, 0);
-        }
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)){
-            GetComponent<Animator>().SetBool("Corriendo", false);
-        }
-        */
-
+       
         //Si clickeo y estoy en tierra salto!
-        if ((joybutton.Pressed & onGround) || (Input.GetKey(KeyCode.K) & onGround))
+        if ((joybuttonA.Pressed & onGround) || (Input.GetKey(KeyCode.K) & onGround))
         {
             rb.velocity = new Vector2(rb.velocity.x, 5);
             GetComponent<Animator>().SetBool("Jumping", true);
+            GetComponent<Rigidbody2D>().gravityScale = 5;
         }
         //ademas si clickeo disparo
         bool shoot = false;
-        if ((joybutton.Pressed) || (Input.GetKey(KeyCode.L)))
+        if ((joybuttonB.Pressed) || (Input.GetKey(KeyCode.L)))
         {
             GetComponent<Animator>().SetBool("Shoot", true);
             shoot = true;
