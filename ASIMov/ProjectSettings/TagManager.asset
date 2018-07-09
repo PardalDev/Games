@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 108744197
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -47,3 +50,6 @@ TagManager:
   - name: Player
     uniqueID: 3455696689
     locked: 1
+  - name: CloserToCamera
+    uniqueID: 2168135593
+    locked: 0
