@@ -26,7 +26,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1408571460516370
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1481345845064782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.942301, y: -0.40015358, z: 0}
+  m_LocalPosition: {x: -7.1104927, y: -0.65465575, z: 0}
   m_LocalScale: {x: 3.0541599, y: 3.58881, z: 1}
   m_Children:
   - {fileID: 4495927087416450}
@@ -197,6 +197,8 @@ MonoBehaviour:
   isEnemy: 1
   applyScore: 1
   scoreValue: 1
+  Collectable: {fileID: 4328459707068652, guid: fd603e33ff2f21f48b0bcc4119291ca0,
+    type: 2}
 --- !u!114 &114428679162585224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -229,6 +231,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  Disablecamera: {fileID: 0}
 --- !u!122 &122013364018824638
 Halo:
   m_ObjectHideFlags: 1

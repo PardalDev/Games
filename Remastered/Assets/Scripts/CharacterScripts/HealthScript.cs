@@ -16,6 +16,7 @@ public class HealthScript : MonoBehaviour
     public bool isEnemy = true;
     public bool applyScore = true;
     public int scoreValue = 1;
+    public Transform Collectable;
     /// <summary>
     /// Inflicts damage and check if the object should be destroyed
     /// </summary>
@@ -39,6 +40,9 @@ public class HealthScript : MonoBehaviour
 
             }
             Destroy(gameObject);
+            var item = Instantiate(Collectable) as Transform;
+            // Assign position
+            item.position = transform.position;
         }
 
          
