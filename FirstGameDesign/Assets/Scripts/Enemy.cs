@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
 
     public int healthPickupChance;
     public GameObject hearth;
+    public GameObject deathMark;
+    public GameObject Explosion;
 
     public virtual void Start()
     {
@@ -37,6 +39,8 @@ public class Enemy : MonoBehaviour
             {
                 Instantiate(hearth, transform.position, transform.rotation);
             }
+            Instantiate(deathMark, transform.position, transform.rotation);
+            Instantiate(Explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

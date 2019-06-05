@@ -100,7 +100,7 @@ MonoBehaviour:
   shotPoint: {fileID: 7469240953401321776}
   timeBetweenShots: 0.5
   damage: 10
-  slash: {fileID: 3271810337914455179, guid: 6378c46665ee0394494adba636e5e781, type: 3}
+  slash: {fileID: 1743040933442109694, guid: 51c50475dfb6d174da0e7b647569f6f5, type: 3}
 --- !u!61 &6095394987895810171
 BoxCollider2D:
   m_ObjectHideFlags: 0

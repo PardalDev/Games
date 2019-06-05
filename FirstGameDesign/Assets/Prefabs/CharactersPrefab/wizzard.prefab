@@ -621,7 +621,11 @@ MonoBehaviour:
   pickupChance: 0
   pickups: []
   healthPickupChance: 0
-  hearth: {fileID: 0}
+  hearth: {fileID: 2409017866575118090, guid: a970bd4218d42884d9610f1814c91da1, type: 3}
+  deathMark: {fileID: 3171441521305654483, guid: 3e180cb628513e649a48c4c6e89606c4,
+    type: 3}
+  Explosion: {fileID: 3271810337914455179, guid: 6378c46665ee0394494adba636e5e781,
+    type: 3}
   minX: -65
   maxX: 73
   minY: -33

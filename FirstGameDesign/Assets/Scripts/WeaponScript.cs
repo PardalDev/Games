@@ -14,7 +14,13 @@ public class WeaponScript : MonoBehaviour
 
     private float shotTime;
 
+    private Animator cameraAnim;
     // Update is called once per frame
+
+    public void Start()
+    {
+        cameraAnim = Camera.main.GetComponent<Animator>();
+    }
     void Update()
     {
         if(gameObject.transform.root.gameObject.name == "Player") { 
@@ -27,6 +33,7 @@ public class WeaponScript : MonoBehaviour
             if (Input.GetMouseButton(0)) {
                 if (Time.time >= shotTime) {
                     Instantiate(proyectile, shotPoint.position, transform.rotation);
+                    cameraAnim.SetTrigger("shake");
                     shotTime = Time.time + timeBetweenShots;
                 }
             }

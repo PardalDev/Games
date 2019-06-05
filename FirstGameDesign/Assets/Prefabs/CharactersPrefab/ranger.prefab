@@ -983,12 +983,16 @@ MonoBehaviour:
   health: 16
   player: {fileID: 0}
   speed: 30
-  timeBetweenAttacks: 6
+  timeBetweenAttacks: 3
   damage: 1
   pickupChance: 0
   pickups: []
   healthPickupChance: 0
-  hearth: {fileID: 0}
+  hearth: {fileID: 2409017866575118090, guid: a970bd4218d42884d9610f1814c91da1, type: 3}
+  deathMark: {fileID: 3171441521305654483, guid: 3e180cb628513e649a48c4c6e89606c4,
+    type: 3}
+  Explosion: {fileID: 3271810337914455179, guid: 6378c46665ee0394494adba636e5e781,
+    type: 3}
   stopDistance: 25
   shotPoint: {fileID: 8761557591621111197}
   bullet: {fileID: 7718421264777262050, guid: 2d0f3b731b49a2943b597774c4257330, type: 3}

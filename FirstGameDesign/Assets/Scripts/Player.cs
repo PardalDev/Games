@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
     private Vector2 moveAmount;
+    protected Joystick joystick;
 
     private Animator anim;
 
@@ -16,15 +17,23 @@ public class Player : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    public Animator gethurt;
+
+    private SceneTransition scene;
+
+
     private void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        scene = FindObjectOfType<SceneTransition>();
+        joystick = FindObjectOfType<Joystick>();
     }
 
     private void Update()
     {
-        Vector2 moveImput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        Vector2 moveImput = new Vector2(Input.GetAxisRaw("Horizontal")+ joystick.Horizontal, Input.GetAxisRaw("Vertical") + joystick.Vertical);
         moveAmount = moveImput.normalized * speed;
 
         //Chequeo si se esta moviendo
@@ -52,11 +61,13 @@ public class Player : MonoBehaviour
     }
     public void takeDamage(int damageAmount)
     {
+        gethurt.GetComponent<Animator>().SetTrigger("hurt");
         health -= damageAmount;
         UpdateHealthUI(health);
         if (health <= 0)
         {
             Destroy(gameObject);
+            scene.LoadScene("lose");
         }
     }
     public void ChangeWeapon(WeaponScript weapontoEquip) {
@@ -107,5 +118,7 @@ public class Player : MonoBehaviour
             return null;
         }
     }*/
+
+    
 
 }

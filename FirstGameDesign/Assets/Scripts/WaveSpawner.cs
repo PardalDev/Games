@@ -9,7 +9,6 @@ public class WaveSpawner : MonoBehaviour
         public Enemy[] enemies;
         public int count;
         public float timeBetweenSpawns;
-
     }
 
     public Wave[] waves;
@@ -21,6 +20,10 @@ public class WaveSpawner : MonoBehaviour
     private Transform player;
 
     private bool finishedSpawned;
+
+    public GameObject boss;
+    public Transform bossSpawnPoint;
+    public GameObject bossHealthBar;
 
     private void Start()
     {
@@ -68,7 +71,8 @@ public class WaveSpawner : MonoBehaviour
 
             }
             else {
-                Debug.Log("GAME FINISHED!");
+                Instantiate(boss, bossSpawnPoint.position, bossSpawnPoint.rotation);
+                bossHealthBar.SetActive(true);
             }
         }
     }

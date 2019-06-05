@@ -8,12 +8,14 @@ public class Proyectile : MonoBehaviour
     public float lifeTime;
 
     public GameObject explode;
+    public GameObject sound;
 
     public int damage;
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("DestroyProyectile", lifeTime);        
+        Invoke("DestroyProyectile", lifeTime);
+        Instantiate(sound, transform.position, transform.rotation);
     }
 
     // Update is called once per frame
@@ -27,6 +29,11 @@ public class Proyectile : MonoBehaviour
     {
         if (collision.tag == "Enemy") {
             collision.GetComponent<Enemy>().takeDamage(damage);
+            DestroyProyectile();
+        }
+        if (collision.tag == "Boss")
+        {
+            collision.GetComponent<Boss>().takeDamage(damage);
             DestroyProyectile();
         }
     }

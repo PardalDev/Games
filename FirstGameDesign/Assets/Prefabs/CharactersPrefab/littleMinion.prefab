@@ -1340,7 +1340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16a19229cb4ecca448f899f8dedf4542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 1
   player: {fileID: 0}
   speed: 12
   timeBetweenAttacks: 5
@@ -1351,6 +1351,10 @@ MonoBehaviour:
   - {fileID: 9127422188109334235, guid: e5c88cf10a8058e45b04741220f7a881, type: 3}
   healthPickupChance: 50
   hearth: {fileID: 2409017866575118090, guid: a970bd4218d42884d9610f1814c91da1, type: 3}
+  deathMark: {fileID: 3171441521305654483, guid: 3e180cb628513e649a48c4c6e89606c4,
+    type: 3}
+  Explosion: {fileID: 3271810337914455179, guid: 6378c46665ee0394494adba636e5e781,
+    type: 3}
   stopDistance: 6
   attackSpeed: 2
 --- !u!1 &472531955064054745
