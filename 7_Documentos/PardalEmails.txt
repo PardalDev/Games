@@ -1,0 +1,12 @@
+Nombre		Email					Skype
+Carlitos   	carlos.machin.amaro@gmail.com
+Fabian
+Andres     	lic.andres.martinez@gmail.com
+Mariana		marianadiaz86@gmail.com
+Martin          Martin.labandera86@gmail.com
+Santiago   	archivoapathos@gmail.com
+Matias
+Alejo		alejodecarlo14@gmail.com
+Sebastian	Sebavarela@gmail.com
+Luis		luiantgarvier@gmail.com			luiantgarvier
+Ignacio		Ignaciotest@gmail.com			
