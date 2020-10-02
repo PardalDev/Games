@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
 {
     private Vector2 moveAmount;
     public int speed;
-    public GameObject Joy;
     protected Joystick joystick;
     protected Rigidbody2D rb;
 
