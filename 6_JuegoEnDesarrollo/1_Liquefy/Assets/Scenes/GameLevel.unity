@@ -121,6 +121,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &420649664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4160725024035098989, guid: 08a1a2f69f9ee7440954311022932798,
+    type: 3}
+  m_PrefabInstance: {fileID: 1048651205}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &420649665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420649664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aab4c8111b7c411b9b92cf3dbc5bd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 1
+  runInBackground: 1
+  autoStartServerBuild: 1
+  showDebugMessages: 0
+  serverTickRate: 30
+  offlineScene: 
+  onlineScene: 
+  transport: {fileID: 420649666}
+  networkAddress: localhost
+  maxConnections: 4
+  disconnectInactiveConnections: 0
+  disconnectInactiveTimeout: 60
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 3007411486756917778, guid: 89948ad74b9d1944296e390a851a9244,
+    type: 3}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 0
+  spawnPrefabs: []
+--- !u!114 &420649666 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4160725024035098977, guid: 08a1a2f69f9ee7440954311022932798,
+    type: 3}
+  m_PrefabInstance: {fileID: 1048651205}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420649664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7424c1070fad4ba2a7a96b02fbeb4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &571814033
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +526,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4160725024035098976, guid: 08a1a2f69f9ee7440954311022932798, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 08a1a2f69f9ee7440954311022932798, type: 3}
 --- !u!1 &1213756420
 GameObject:
