@@ -17,11 +17,9 @@ public class Player : NetworkBehaviour
     {
         joystick = FindObjectOfType<Joystick>();
         rb = GetComponent<Rigidbody2D>();
-
     }
 
     // Update is called once per frame
-    [Command]
     void Update()
     {
         if (!isLocalPlayer)
@@ -50,7 +48,6 @@ public class Player : NetworkBehaviour
 
     }
 
-    [Command]
     private void FixedUpdate()
     {
         if (isLocalPlayer)
