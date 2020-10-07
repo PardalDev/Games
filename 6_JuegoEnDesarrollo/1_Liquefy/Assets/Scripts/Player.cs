@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
-public class Player : Mirror.NetworkBehaviour
+public class Player : NetworkBehaviour
 {
     private Vector2 moveAmount;
     public int speed;
@@ -20,8 +21,12 @@ public class Player : Mirror.NetworkBehaviour
     }
 
     // Update is called once per frame
+    [Command]
     void Update()
     {
+        if (!isLocalPlayer)
+            return;
+
         Vector2 moveImput = new Vector2(Input.GetAxisRaw("Horizontal") + joystick.Horizontal, Input.GetAxisRaw("Vertical") + joystick.Vertical);
         moveAmount = moveImput.normalized * speed;
 
@@ -45,6 +50,7 @@ public class Player : Mirror.NetworkBehaviour
 
     }
 
+    [Command]
     private void FixedUpdate()
     {
         if (isLocalPlayer)
