@@ -174,10 +174,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3007411486756917778, guid: 89948ad74b9d1944296e390a851a9244,
         type: 3}
+    - target: {fileID: 4160725024035098976, guid: 08a1a2f69f9ee7440954311022932798,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4160725024035098989, guid: 08a1a2f69f9ee7440954311022932798,
         type: 3}
       propertyPath: m_Name
       value: NetworkManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4160725024035098989, guid: 08a1a2f69f9ee7440954311022932798,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4160725024035098990, guid: 08a1a2f69f9ee7440954311022932798,
         type: 3}
