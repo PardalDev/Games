@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Cinemachine;
+﻿using Cinemachine;
+using Photon.Pun;
 using UnityEngine;
-using Mirror;
 
-public class PlayerCameraController : NetworkBehaviour
+
+
+public class PlayerCameraController : MonoBehaviourPun
 {
 
     [Header("Camera")]
@@ -14,12 +14,16 @@ public class PlayerCameraController : NetworkBehaviour
     private CinemachineTransposer transposer;
 
     //Este metodo habilita a que cada uno que tenga autoridad sobre sus atributos pueda encender la camara.
-    public override void OnStartAuthority()
+
+    private void Start()
     {
-        transposer = virtualCamera.GetCinemachineComponent<CinemachineTransposer>();
-        virtualCamera.gameObject.SetActive(true);
-        //Enciendo la camara del player local.
-        enabled = true;
+        if (photonView.IsMine)
+        {
+            transposer = virtualCamera.GetCinemachineComponent<CinemachineTransposer>();
+            virtualCamera.gameObject.SetActive(true);
+            //Enciendo la camara del player local.
+            enabled = true;
+        }
     }
 
 
