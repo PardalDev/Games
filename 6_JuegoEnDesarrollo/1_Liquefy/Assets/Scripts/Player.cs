@@ -24,34 +24,31 @@ public class Player : NetworkBehaviour
     {
         if (!isLocalPlayer)
             return;
+        if (!hasAuthority)
+            return;
 
         Vector2 moveImput = new Vector2(Input.GetAxisRaw("Horizontal") + joystick.Horizontal, Input.GetAxisRaw("Vertical") + joystick.Vertical);
         moveAmount = moveImput.normalized * speed;
-
-        if (moveImput != Vector2.zero)
-        {
-
-            if (Input.GetKeyDown("left shift"))
-            {
-                //   
-            }
-            else
-            {
-                //
-            }
-        }
-        else
-        {
-            //
-        }
-
 
     }
 
     private void FixedUpdate()
     {
-        if (isLocalPlayer)
-            rb.MovePosition(rb.position + moveAmount * Time.fixedDeltaTime);
+        //El cliente que tiene autoridad para moverse, le pide al server que le permita moverse
+        if (isLocalPlayer && hasAuthority)
+            CmdMove();
+    
     }
 
+    //Los clientes le piden al server moverse
+    [Command]
+    private void CmdMove() {
+        ClientMoveOrder();
+    }
+
+    //El server le dice a los clientes que se deben mover
+    [ClientRpc]
+    private void ClientMoveOrder() {
+        rb.MovePosition(rb.position + moveAmount * Time.fixedDeltaTime);
+    }
 }
