@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class PlayerNameInput : MonoBehaviour
 {
     [SerializeField] private TMP_InputField nameInputField = null;
-    [SerializeField] private Button continueButton = null;
+    [SerializeField] private Button SinglePlay = null;
+    [SerializeField] private Button NetworkPlay = null;
+    [SerializeField] private Button MultiplayerPlay = null;
 
     private const string PlayerPrefsNameKey = "PlayerName";
 
@@ -28,7 +30,9 @@ public class PlayerNameInput : MonoBehaviour
     //Solo podes apretar el start si el nombre existe
     public void SetPlayerName(string name)
     {
-        continueButton.interactable = !string.IsNullOrEmpty(nameInputField.text);
+        SinglePlay.interactable = !string.IsNullOrEmpty(nameInputField.text);
+        NetworkPlay.interactable = !string.IsNullOrEmpty(nameInputField.text);
+        MultiplayerPlay.interactable = !string.IsNullOrEmpty(nameInputField.text);
     }
 
     public void SavePlayerName() {
