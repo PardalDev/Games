@@ -1,10 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using Mirror;
+﻿using UnityEngine;
 
-public class PlayerNetwork : NetworkBehaviour
+public class PlayerLocal : MonoBehaviour
 {
     private Vector2 moveAmount;
     public int speed;
@@ -23,8 +19,8 @@ public class PlayerNetwork : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-       // if (!isLocalPlayer)
-         //   return;
+        // if (!isLocalPlayer)
+        //   return;
 
         Vector2 moveImput = new Vector2(Input.GetAxisRaw("Horizontal") + joystick.Horizontal, Input.GetAxisRaw("Vertical") + joystick.Vertical);
         moveAmount = moveImput.normalized * speed;
@@ -51,8 +47,6 @@ public class PlayerNetwork : NetworkBehaviour
 
     private void FixedUpdate()
     {
-        if (isLocalPlayer)
             rb.MovePosition(rb.position + moveAmount * Time.fixedDeltaTime);
     }
-
 }

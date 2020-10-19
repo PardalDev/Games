@@ -106,4 +106,10 @@ public class MainMenu : MonoBehaviourPunCallbacks
             PhotonNetwork.LoadLevel("GameLevelNetwork");
     }
 
+    public void quitGame()
+    {
+        // "Stage1" is the name of the first scene we created.
+        Application.Quit();
+    }
+
 } 
