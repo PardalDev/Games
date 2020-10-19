@@ -4,17 +4,20 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviourPunCallbacks
 {
     [SerializeField] private GameObject findOpponentPanel = null;
     [SerializeField] private GameObject waitingStatusPanel = null;
+    [SerializeField] private Button ButtonStart = null;
     [SerializeField] private TextMeshProUGUI waitingStatusText = null;
 
     private bool isConnecting = false;
 
     private const string GameVersion = "0.1";
-    private const int MaxPlayersPerRoom = 2;
+    private const int MinPlayersPerRoom = 2;
+    private const int MaxPlayersPerRoom = 10;
 
     private void Awake()
     {
@@ -62,8 +65,9 @@ public class MainMenu : MonoBehaviourPunCallbacks
         int playerCount = PhotonNetwork.CurrentRoom.PlayerCount;
         if (playerCount != MaxPlayersPerRoom)
         {
-            waitingStatusText.text = "Waiting for more opponents";
-            Debug.Log("Client is waiting for more opponents");
+            waitingStatusText.text = "Waiting for opponents " +
+                "Current Player count: "+ PhotonNetwork.CurrentRoom.PlayerCount;
+            Debug.Log("Client is waiting for opponents");
         }
         else {
             waitingStatusText.text = "Opponent Found";
@@ -73,12 +77,29 @@ public class MainMenu : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
     {
-        if (PhotonNetwork.CurrentRoom.PlayerCount==MaxPlayersPerRoom) {
-            PhotonNetwork.CurrentRoom.IsOpen = false;
+        if (PhotonNetwork.CurrentRoom.PlayerCount >= MinPlayersPerRoom)
+        {
+            waitingStatusText.text = "You joined a match";
+            Debug.Log("Match is ready to begin");
+            ButtonStart.interactable=true;
         }
-        Debug.Log("Match is ready to begin");
-        waitingStatusText.text = "You joined a match";
-
-        PhotonNetwork.LoadLevel("GameLevel");
+        if (PhotonNetwork.CurrentRoom.PlayerCount == MaxPlayersPerRoom) {
+            PhotonNetwork.CurrentRoom.IsOpen = false;
+            waitingStatusText.text = "You joined a match";
+            Debug.Log("Match is ready to begin");
+            PhotonNetwork.LoadLevel("GameLevel");
+        }
     }
+    public void LunchGame()
+    {
+        if (PhotonNetwork.CurrentRoom.PlayerCount >= MinPlayersPerRoom)
+        {
+            PhotonNetwork.CurrentRoom.IsOpen = false;
+            waitingStatusText.text = "You joined a match";
+            Debug.Log("Match is ready to begin");
+            PhotonNetwork.LoadLevel("GameLevel");
+        }
+    }
+
+
 } 
